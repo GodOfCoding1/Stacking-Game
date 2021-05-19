@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <link rel="icon" href="stacked-files.png" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Stacking Game</title>
+</head>
+
+<body style="
+      display: flex;
+      flex-direction: column;
+      background-color: rgb(242, 246, 246);
+    ">
+    <nav class="shadow-sm bg-gray-800">
+        <div class="hidden sm:block max-w-7xl mx-auto px-2 sm:px-6 lg:px-8">
+            <div class="relative flex items-center justify-between h-16">
+                <div class="
+              flex-1 flex
+              items-center
+              justify-center
+              sm:items-stretch
+              sm:justify-start
+            ">
+                    <div class="hidden sm:block sm:ml-6">
+                        <div class="flex space-x-4">
+                            <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
+                            <a href="#" class="
+                    bg-gray-900
+                    text-white
+                    px-3
+                    py-2
+                    rounded-md
+                    text-sm
+                    font-medium
+                  " aria-current="page">Home</a
+                >
+
+                <a
+                  href="/contact.html"
+                  class="
+                    text-gray-300
+                    hover:bg-gray-700
+                    hover:text-white
+                    px-3
+                    py-2
+                    rounded-md
+                    text-sm
+                    font-medium
+                  "
+                  >Conact</a
+                >
+
+                <a
+                  href="/about.html"
+                  class="
+                    text-gray-300
+                    hover:bg-gray-700
+                    hover:text-white
+                    px-3
+                    py-2
+                    rounded-md
+                    text-sm
+                    font-medium
+                  "
+                  >About</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Mobile menu, show/hide based on menu state. -->
+      <div class="sm:hidden" id="mobile-menu">
+        <div class="px-2 pt-2 pb-3 space-y-1">
+          <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
+          <a
+            href="#"
+            class="
+              bg-gray-900
+              text-white
+              block
+              px-3
+              py-2
+              rounded-md
+              text-base
+              font-medium
+            "
+            aria-current="page"
+            >Home</a
+          >
+
+          <a
+            href="/contact.html"
+            class="
+              text-gray-300
+              hover:bg-gray-700
+              hover:text-white
+              block
+              px-3
+              py-2
+              rounded-md
+              text-base
+              font-medium
+            "
+            >Conacts</a
+          >
+
+          <a
+            href="/about.html"
+            class="
+              text-gray-300
+              hover:bg-gray-700
+              hover:text-white
+              block
+              px-3
+              py-2
+              rounded-md
+              text-base
+              font-medium
+            "
+            >About</a
+          >
+        </div>
+      </div>
+    </nav>
+    <button
+      id="play-btn"
+      class="glow-on-hover"
+      style="
+        align-self: center;
+        margin-top: 17px;
+        margin-bottom: 5px;
+        font-size: 25px;
+      "
+      type="button"
+    >
+      PLAY
+    </button>
+    <div class="info bg-white border-gray-100 rounded shadow m-3 p-1" id="how">
+      <p style="font-weight: bold; margin-left: 3%; letter-spacing: 0.4px">
+        How to play:
+      </p>
+      <ul style="margin-left: 4%">
+        <li>- Click on the screen to place blocks</li>
+        <li>- Any overhanging part of the block will be cut</li>
+        <li>- So goal is to time the click</li>
+      </ul>
+    </div>
+    <div
+      class="info bg-white border-gray-100 rounded shadow m-3 p-1"
+      id="notes"
+    >
+      <p style="font-weight: bold; margin-left: 3%; letter-spacing: 0.4px">
+        Notes:
+      </p>
+      <ul style="margin-left: 4%">
+        <li>- You have to click for the game to start</li>
+        <li>
+          - In lower-end phones there might be a slight deplay for the click
+        </li>
+        <li>- Use fullscreen for best experience</li>
+      </ul>
+    </div>
+  </body>
+  <script>
+    function redirectPlay() {
+      window.location.href = "/play.html";
+    }
+    document.getElementById("play-btn").addEventListener("click", redirectPlay);
+  </script>
+</html>
